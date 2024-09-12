@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Employee(fristName) {
+            this.fristName = fristName;
+            this.sayHello = function(name) {
+                console.info(`Hi ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        function Manager(fristName, lastName) {
+            this.lastName = lastName;
+            Employee.call(this, fristName);
+        }
+        const raihan = new Manager("raihan", "arif");
+        console.info(raihan);
+    </script>
+</body>
+
+</html>
